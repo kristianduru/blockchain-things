@@ -1,4 +1,4 @@
-console.log("Ether balance check");
+console.log("Ether balance-check");
 var totalBal = 0;
 for (var acctNum in eth.accounts) {
     var acct = eth.accounts[acctNum];

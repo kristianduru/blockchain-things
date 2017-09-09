@@ -2,7 +2,9 @@ Notes of dos and dont's :
 
 * DO use geth --fast and --cache=2048 to do a fast sync to get up to date with the block chain as fast as possible, takes hours instead of days.
 
-* DO clean chaindata with removedb if you are going to do a fresh sync with --fast
+* DO use geth --light, which is even better than --fast. SPV type mode that gets you up in minutes. 
+
+* DO clean chaindata with removedb if you are going to do a fresh sync with --fast otherwise it will continue doing full sync.
 
 * DONT start geth without --fast or it will disregard the reciepts gotten from fast syncing and start all over again with a slooow normal sync.
 
@@ -14,9 +16,11 @@ Notes of dos and dont's :
 
 * DO remember that you have an adress that is capable of existing on two chains with the "same" amount of ether ;)
 
+* DO be careful of replay attacks.
+
 * DO use docker containers to run multiple blockchain clients because its fun and doing sync on both will be hilarious for your diskIO
 
-* DO try the below when creating transactions:
+* DO try the below when crafting transactions:
 ~~~~
 
 // Set account and unlock it 
